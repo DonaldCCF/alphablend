@@ -1,7 +1,5 @@
 #! /usr/bin/env python
 
-"""Genetic Programming in Python, with a scikit-learn inspired API"""
-
 from setuptools import setup, find_packages
 import factorgene
 
