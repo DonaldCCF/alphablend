@@ -35,7 +35,7 @@ class _Fitness(object):
 def _ic(y, y_pred):
     """Calculate the Pearson correlation coefficient."""
     with np.errstate(divide='ignore', invalid='ignore'):
-        feature = y_pred.dropna(how='all')
+        feature = y_pred.dropna(thresh=y_pred.shape[1]*0.5)
         feature = feature.sub(feature.mean(axis=1), 0).div(feature.std(axis=1), 0)
         y = y[y.index.isin(feature.index)]
         feat = feature[feature.index.isin(y.index)]
@@ -49,7 +49,7 @@ def _ric(y, y_pred):
     # Check if any column in y or y_pred is constant
     with np.errstate(divide='ignore', invalid='ignore'):
         feature = y_pred.loc[(y_pred.apply(lambda x: x.nunique(), axis=1) > 1)]
-        feature = feature.dropna(how='all')
+        feature = feature.dropna(thresh=y_pred.shape[1]*0.5)
         feature = feature.sub(feature.mean(axis=1), axis=0).div(feature.std(axis=1), axis=0)
         y = y[y.index.isin(feature.index)]
         feat = feature[feature.index.isin(y.index)]
