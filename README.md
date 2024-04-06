@@ -70,3 +70,13 @@ print(optimizer.best_programs_)
 ```
 
 ## **Reference**
+
+
+The development and theoretical foundation of `FactorGene` are inspired and informed by significant works in the field of genetic algorithms and their application to financial modeling. Below are key references that have influenced this project:
+
+- Jansen, Stefan. "Machine Learning for Algorithmic Trading: Predictive models to extract signals from market and alternative data for systematic trading strategies with Python, 2nd Edition." Packt Publishing, 2020.
+- Kakushadze, Zura. "101 Formulaic Alphas" (December 9, 2015). Wilmott Magazine, issue 84 (2016), pages 72-80.
+- Koza, John R. "Genetic Programming: On the Programming of Computers by Means of Natural Selection." MIT Press, 1992. 
+- Poli, Riccardo, et al. "A Field Guide to Genetic Programming." Lulu.com, 2008.
+  
+These references have provided valuable insights and methodologies that have been instrumental in the development of `FactorGene`.
