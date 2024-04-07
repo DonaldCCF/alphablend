@@ -48,7 +48,7 @@ The input data, consisting of the matrices from **X** and the target variable **
 ### 3. Output
 The culmination of the genetic algorithm's evolutionary process is a collection of optimized alphas. These alphas are anticipated to exhibit high Information Coefficients (IC), indicating their predictive strength. The final output is a set of programs, each representing a formula that combines various alphas. Accompanying each program is its corresponding fitness score, which quantifies its effectiveness in capturing the relationship with the target variable.
 
-<img src="https://github.com/donaldccf/AlphaGene/assets/117000928/6a903004-8f3a-4a40-b3df-f0abcc4e7516" width="650" alt="AlphaGene Diagram">   <br /> 
+<img src="https://github.com/donaldccf/AlphaGene/assets/117000928/808d4f05-1bb4-47a5-9287-b2d5aae3b54a" width="650" alt="AlphaGene Diagram">   <br /> 
 *Figure 3: Structure of AlphaGene.*
 
 ## **Fitness**
