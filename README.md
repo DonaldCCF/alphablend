@@ -1,4 +1,4 @@
-# FactorGene
+# AlphaGene
 
 <!--ts-->
 * [Introduction](#introduction)
@@ -12,7 +12,7 @@
 
 ## **Introduction**
 
-`FactorGene` is a sophisticated Python library that leverages the principles of genetic algorithms, drawing inspiration from `gplearn` and harnessing the power of `scikit-learn`. It is meticulously engineered for the discovery and optimization of predictive factors that possess high information coefficients (IC), making it an essential tool for forecasting market movements, aiming to identify and refine factors that can accurately capture and predict fluctuations within financial markets,
+`AlphaGene` is a sophisticated Python library that leverages the principles of genetic algorithms, drawing inspiration from `gplearn` and harnessing the power of `scikit-learn`. It is meticulously engineered for the discovery and optimization of predictive alphas that possess high information coefficients (IC), making it an essential tool for forecasting market movements, aiming to identify and refine alphas that can accurately capture and predict fluctuations within financial markets,
 
 Genetic programming represents a robust methodology for prompting computers to automatically address a problem based solely on a high-level description of the desired outcome (Koza, 1992). It is a domain-independent approach that evolves a population of computer programs to resolve a given issue. Genetic programming systematically modifies a group of computer programs generation after generation by applying mechanisms analogous to natural genetic processes.
 
@@ -25,7 +25,7 @@ The evolutionary operations employed in genetic programming include:
 
 Occasionally, analogs of developmental stages are used to morph an embryonic form into a mature structure.
 
-![Genetic Programming Main Loop](https://github.com/donaldccf/FactorGene/assets/117000928/68a92d75-41ed-4e88-9f94-35a161bdd820)<br />
+![Genetic Programming Main Loop](https://github.com/donaldccf/AlphaGene/assets/117000928/68a92d75-41ed-4e88-9f94-35a161bdd820)<br />
 *Figure 1: Illustration of the main loop of genetic programming (Koza, 1992).*
 
 Unlike genetic algorithms where the population structures are fixed-length character strings that symbolize potential solutions, genetic programming deals directly with programs that act as candidate solutions upon execution.
@@ -33,27 +33,27 @@ Unlike genetic algorithms where the population structures are fixed-length chara
 ### Program Representation
 
 In genetic programming, programs are usually represented as syntax trees rather than lines of code. For instance, the expression <br /> `max(x * x, x + 3 * y)` is visualized through a tree structure that highlights nodes and links—the nodes represent instructions, while the links define the arguments for each instruction. The inner nodes of such a tree are termed functions, and the tree's leaves are referred to as terminals.<br /> 
-<img src="https://github.com/donaldccf/FactorGene/assets/117000928/d8676292-c583-41cd-8ee7-d56b11f48c7c" width="250" alt="FactorGene Diagram"> <br /> 
+<img src="https://github.com/donaldccf/AlphaGene/assets/117000928/d8676292-c583-41cd-8ee7-d56b11f48c7c" width="250" alt="AlphaGene Diagram"> <br /> 
 *Figure 2: Basic tree-like program representation used in genetic programming (Koza, 1992).*
 
 ## **Structure**
 
 ### 1. Input Data
-- **X**: A dictionary of DataFrames, which can include various types of data such as open-high-low-close (OHLC) values, momentum indicators, growth metrics, and other financial factors.
+- **X**: A dictionary of DataFrames, which can include various types of data such as open-high-low-close (OHLC) values, momentum indicators, growth metrics, and other financial alphas.
 - **y**: A DataFrame that represents the target variable. This could be data that we aim to predict or find the highest correlation with, such as the return on the next day.
 
 ### 2. Genetic Algorithm
-The input data, consisting of the matrices from **X** and the target variable **y**, are processed through a genetic algorithm. Within the `FactorGene` framework, this algorithm seeks to identify and enhance predictive factors. It employs evolutionary techniques like mutation, crossover, and selection to iteratively improve the predictive power of these factors.
+The input data, consisting of the matrices from **X** and the target variable **y**, are processed through a genetic algorithm. Within the `AlphaGene` framework, this algorithm seeks to identify and enhance predictive alphas. It employs evolutionary techniques like mutation, crossover, and selection to iteratively improve the predictive power of these alphas.
 
 ### 3. Output
-The culmination of the genetic algorithm's evolutionary process is a collection of optimized factors. These factors are anticipated to exhibit high Information Coefficients (IC), indicating their predictive strength. The final output is a set of programs, each representing a formula that combines various factors. Accompanying each program is its corresponding fitness score, which quantifies its effectiveness in capturing the relationship with the target variable.
+The culmination of the genetic algorithm's evolutionary process is a collection of optimized alphas. These alphas are anticipated to exhibit high Information Coefficients (IC), indicating their predictive strength. The final output is a set of programs, each representing a formula that combines various alphas. Accompanying each program is its corresponding fitness score, which quantifies its effectiveness in capturing the relationship with the target variable.
 
-<img src="https://github.com/donaldccf/FactorGene/assets/117000928/6a903004-8f3a-4a40-b3df-f0abcc4e7516" width="650" alt="FactorGene Diagram">   <br /> 
-*Figure 3: Structure of FactorGene.*
+<img src="https://github.com/donaldccf/AlphaGene/assets/117000928/6a903004-8f3a-4a40-b3df-f0abcc4e7516" width="650" alt="AlphaGene Diagram">   <br /> 
+*Figure 3: Structure of AlphaGene.*
 
 ## **Fitness**
 
-In the `FactorGene` library, fitness is a crucial metric used to evaluate the performance of a program. It quantifies how well the program's predicted values (`y_pred`) align with the actual target values (`y`). The fitness score is computed using specific functions that measure the correlation between `y_pred` and `y`.
+In the `AlphaGene` library, fitness is a crucial metric used to evaluate the performance of a program. It quantifies how well the program's predicted values (`y_pred`) align with the actual target values (`y`). The fitness score is computed using specific functions that measure the correlation between `y_pred` and `y`.
 
 ### IC (Information Coefficient)
 - **Type**: Cross-sectional Pearson correlation.
@@ -66,7 +66,7 @@ In the `FactorGene` library, fitness is a crucial metric used to evaluate the pe
 
 ## **Functions**
 
-The `FactorGene` library includes a variety of functions that are essential for financial time-series analysis. These functions can be categorized into standard mathematical operations, operators, and specialized functions derived from financial analysis concepts, many of which are inspired by WorldQuant LLC's research.
+The `AlphaGene` library includes a variety of functions that are essential for financial time-series analysis. These functions can be categorized into standard mathematical operations, operators, and specialized functions derived from financial analysis concepts, many of which are inspired by WorldQuant LLC's research.
 
 ### Standard Mathematical Functions and Operators
 - **abs(x)**: Absolute value of `x`.
@@ -103,7 +103,7 @@ The integers used in these functions represent different time horizons, capturin
 - scikit-learn
 
 ## **Usage**
-*Note*: The following example uses `yfinance` to fetch financial market data, which is **not** a direct dependency of `FactorGene`. If you wish to run the example as is, please ensure you have `yfinance` installed:
+*Note*: The following example uses `yfinance` to fetch financial market data, which is **not** a direct dependency of `AlphaGene`. If you wish to run the example as is, please ensure you have `yfinance` installed:
 
 ```bash
 pip install yfinance
@@ -111,7 +111,7 @@ pip install yfinance
 
 ```
 import pandas as pd
-from factorgene import GeneticOptimizer, function_map
+from alphagene import GeneticOptimizer, function_map
 import yfinance as yf
 
 # Load stock symbols
@@ -129,7 +129,7 @@ for stock in stocks:
     for category in features_dict:
         features_dict[category][stock] = data[category]
 
-# Prepare the dataset for FactorGene
+# Prepare the dataset for AlphaGene
 y = (features_dict['Open'].shift(-2) / features_dict['Open'].shift(-1) - 1).dropna(how='all')
 X = {key: df.loc[y.index] for key, df in features_dict.items()}
 
@@ -144,11 +144,11 @@ print(optimizer.best_programs_)
 ## **Reference**
 
 
-The development and theoretical foundation of `FactorGene` are inspired and informed by significant works in the field of genetic algorithms and their application to financial modeling. Below are key references that have influenced this project:
+The development and theoretical foundation of `AlphaGene` are inspired and informed by significant works in the field of genetic algorithms and their application to financial modeling. Below are key references that have influenced this project:
 
 - Jansen, Stefan. "Machine Learning for Algorithmic Trading, 2nd Edition." Packt Publishing, 2020.
 - Kakushadze, Zura. "101 Formulaic Alphas" (December 9, 2015). Wilmott Magazine, issue 84 (2016), pages 72-80.
 - Koza, John R. "Genetic Programming." MIT Press, 1992. 
 - Poli, Riccardo, et al. "A Field Guide to Genetic Programming." Lulu.com, 2008.
   
-These references have provided valuable insights and methodologies that have been instrumental in the development of `FactorGene`.
+These references have provided valuable insights and methodologies that have been instrumental in the development of `AlphaGene`.
