@@ -1,12 +1,12 @@
 #! /usr/bin/env python
 
 from setuptools import setup, find_packages
-import factorgene
+import alphagene
 
 DESCRIPTION = __doc__
-VERSION = factorgene.__version__
+VERSION = alphagene.__version__
 
-setup(name='factorgene',
+setup(name='alphagene',
       version=VERSION,
       description=DESCRIPTION,
       long_description=open("README.md").read(),
@@ -26,7 +26,7 @@ setup(name='factorgene',
                    'Programming Language :: Python :: 3.10'],
       author='Donald Cheng',
       author_email='cu30ccf@gmail.com',
-      url='https://github.com/donaldccf/FactorGene',
+      url='https://github.com/donaldccf/alphagene',
       license='new BSD',
       packages=find_packages(exclude=['*.tests',
                                       '*.tests.*']),
