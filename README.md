@@ -140,6 +140,11 @@ optimizer.fit(X, y)
 # Display the best programs found
 print(optimizer.best_programs_)
 ```
+<img src="https://github.com/donaldccf/AlphaGene/assets/117000928/c4fca44d-54d6-4903-81c3-deca66948c1a" width="400" alt="AlphaGene Diagram"> <br /> 
+*Figure 4: Top 10 Alpha genrated from the data.*
+
+<img src="https://github.com/donaldccf/AlphaGene/assets/117000928/cfecce19-c0b7-49a8-84af-22c5b911d189" width="150" alt="AlphaGene Diagram"> <br />
+*Figure 5: Example of the program.*
 
 ## **Reference**
 
